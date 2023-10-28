@@ -5,6 +5,11 @@ import config from "../tamagui.config";
 import { GlobalSafeAreaView } from "../utils/safeAreaView";
 import { useFonts } from "expo-font";
 import { useColorScheme } from "react-native";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider,
+} from "@react-navigation/native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,9 +32,13 @@ const RootLayout = () => {
   return (
     <TamaguiProvider config={config}>
       <Theme name={colorScheme}>
-        <GlobalSafeAreaView>
-          <Slot />
-        </GlobalSafeAreaView>
+        <ThemeProvider
+          value={colorScheme === "light" ? DefaultTheme : DarkTheme}
+        >
+          <GlobalSafeAreaView>
+            <Slot />
+          </GlobalSafeAreaView>
+        </ThemeProvider>
       </Theme>
     </TamaguiProvider>
   );

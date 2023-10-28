@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@react-navigation/native": "^6.1.9",
     "@tamagui/babel-plugin": "^1.75.5",
     "@tamagui/config": "^1.75.5",
+    "@tamagui/core": "^1.75.5",
+    "@tamagui/lucide-icons": "^1.75.5",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "expo": "~49.0.15",
     "expo-font": "~11.4.0",

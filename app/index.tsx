@@ -1,10 +1,14 @@
-import { View, Text } from "tamagui";
+import { Link } from "expo-router";
+import { Text, Button, YStack } from "tamagui";
 
 const Index = () => {
   return (
-    <View>
+    <YStack margin="$4" space="$3">
       <Text>YOLO MF</Text>
-    </View>
+      <Link href="/auth/login" asChild>
+        <Button minWidth="$10"> Login </Button>
+      </Link>
+    </YStack>
   );
 };
 
